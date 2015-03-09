@@ -1,5 +1,5 @@
 Angular 1.3 introduced a new directive called `ng-model-options`. This gives you
-more fine-tuned control over how angular updates and manipulates your model.
+more fine-tuned control over how Angular updates and manipulates your model.
 
 ## Usage
 
@@ -48,7 +48,7 @@ vm.modelOptions = {
 };
 ```
 
-This means that angular will not update the model until the user has stopped
+This means that Angular will not update the model until the user has stopped
 changing the value of the `input` for 300 milliseconds. This is great! However,
 what if the user moves out of the input? At that point, we know immediately that
 they will not be changing anything else, right? Right. Enter: `updateOn`.
@@ -129,7 +129,7 @@ function getSetVal(newValue) {
 
 Now, we are storing the actual value of the model in our own `privateState`
 variable. There is one problem with this though. If you're familiar with how
-angular treats the value of `ng-model` attributes with regards to validation,
+Angular treats the value of `ng-model` attributes with regards to validation,
 then you will know that when user input is invalid, the model is set to
 `undefined`. This is a problem because for our getter/setter, a value of
 `undefined` will result in our `privateValue` not getting updated to the true
@@ -169,7 +169,7 @@ vm.modelOptions = {
 
 In 1.3, the only allowed value for `timezone` is `'UTC'`. However, in 1.4, you
 can specify any valid timezone. Here's how it works. By specifying UTC as the
-timezone for these `modelOptions`, we're telling angular that we want the
+timezone for these `modelOptions`, we're telling Angular that we want the
 `$viewValue` (what the user sees and interacts with) to be in the `UTC`
 timezone. However, the `$modelValue` (what really matters) is still in the
 timezone of the browser's locale. This gives you some control over these values
@@ -177,7 +177,7 @@ and how the user interacts with your `ng-model` elements.
 
 ## In conclusion
 
-`ng-model-options` is a very handy directive that gives you what was once very
+`ng-model-options` is a very handy directive that makes what was once very
 difficult to do, much easier to do.
 
 ## Resources
@@ -185,7 +185,7 @@ difficult to do, much easier to do.
 I have several lessons on [`egghead.io`](http://bit.ly/egghead-ng-model-options)
 about these concepts. Also, I gave this as a talk at ng-conf 2015. Feel free to
 watch [the video](http://youtu.be/k3t3ov6xHDw) or see [the jsbin](http://jsbin.com/qocekak/edit). And if you're serious about forms with
-angular, then I recommend you use
+Angular, then I recommend you use
 [angular-formly](http://formly-js.github.io/angular-formly/).
 
 Feel free to each out to me on Twitter:
