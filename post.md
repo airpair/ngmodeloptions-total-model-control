@@ -7,7 +7,7 @@ It's very simple to use. You simply add the `ng-model-options` directive on the
 same element that uses the `ng-model` directive. This is assigned to an object
 which holds the configuration for your `ng-model-options`. Like so:
 
-```html
+```markup
 <input ng-model="vm.user.firstName" ng-model-options="vm.modelOptions" />
 ```
 
@@ -105,7 +105,7 @@ There are sometimes where the model is complex and cannot be easily bound to the
 model we're trying to represent. `getterSetter` allows us to specify a function
 as our `ng-model` rather than an actual value. Like so:
 
-```html
+```javascript
 var privateValue = 'Obi Wan';
 vm.user = {
   firstName: getSetVal // <-- remember, this is what our input's ng-model is bound to
@@ -153,7 +153,7 @@ regardless of the validity of the field.
 Finally, `ng-model-options` allows you to specify a `timezone` property. Let's
 change our input a little:
 
-```html
+```markup
 <input type="time" ng-model="vm.user.firstName" ng-model-options="vm.modelOptions" />
 ```
 
