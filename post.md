@@ -1,6 +1,8 @@
 Angular 1.3 introduced a new directive called `ng-model-options`. This gives you
 more fine-tuned control over how Angular updates and manipulates your model.
 
+*Edit: Play with ng-model-options with [this jsbin](http://jsbin.com/wihuje/edit?html,css,js,output)*
+
 ## Usage
 
 It's very simple to use. You simply add the `ng-model-options` directive on the
@@ -105,7 +107,7 @@ There are sometimes where the model is complex and cannot be easily bound to the
 model we're trying to represent. `getterSetter` allows us to specify a function
 as our `ng-model` rather than an actual value. Like so:
 
-```html
+```javascript
 var privateValue = 'Obi Wan';
 vm.user = {
   firstName: getSetVal // <-- remember, this is what our input's ng-model is bound to
